@@ -1181,7 +1181,7 @@ For the most reliable viewing experience, explore our [ArgonTV Pricing](/pricing
     date: "August 18, 2026",
     author: "ARGONTV Team",
     category: "Troubleshooting",
-    coverImage: "/images/blog/iptv-app-update/iptv-app-update-not-working.webp",
+    coverImage: "/images/blog/iptv-app-update/IPTV-Not-Working-After-App-Update-What-to-Do.jpg",
     content: `
 An IPTV app can suddenly stop working after an update. Channels may refuse to load, playlists can disappear, the EPG may stop updating, or the app may open normally but fail when you try to play a stream.
 
@@ -1191,7 +1191,7 @@ However, an application update does not necessarily mean that your IPTV service 
 
 This guide explains what to check when IPTV stops working after an app update and how to determine whether the problem is caused by the app, your device, your internet connection, your playlist, or the streaming service.
 
-![IPTV Not Working After App Update](/images/blog/iptv-app-update/iptv-app-update-not-working.webp)
+![IPTV Not Working After App Update](/images/blog/iptv-app-update/IPTV-Not-Working-After-App-Update-What-to-Do.jpg)
 
 ## Why Does IPTV Stop Working After an App Update?
 
@@ -1366,7 +1366,7 @@ Try Clear Cache first.
 
 Only use Clear Data if you are prepared to configure the application again.
 
-![Clear cache to fix IPTV update issues](/images/blog/iptv-app-update/iptv-app-update-clear-cache.webp)
+![Clear cache to fix IPTV update issues](/images/blog/iptv-app-update/iptv-smarters-not-working-step-by-step-fix.webp)
 
 ## Check the EPG Settings
 
@@ -1403,7 +1403,7 @@ If another update is available:
 
 Do not assume that the first update is always the final version.
 
-![Check for further IPTV app updates](/images/blog/iptv-app-update/iptv-app-update-check-for-updates.webp)
+![Check for further IPTV app updates](/images/blog/iptv-app-update/iptv-smarters-not-working-step-by-step-fix-1-700x394.webp)
 
 ## Reinstall the IPTV App
 
@@ -1429,7 +1429,7 @@ Then:
 
 A clean installation removes old application files that may have survived the update process.
 
-![Reinstall IPTV app after an update issue](/images/blog/iptv-app-update/iptv-app-update-reinstall-app.webp)
+![Reinstall IPTV app after an update issue](/images/blog/iptv-app-update/images.jfif)
 
 ## Check Device Compatibility
 
@@ -1542,7 +1542,7 @@ When contacting support, provide useful information such as:
 
 Never post your password or private account credentials publicly.
 
-![Troubleshooting IPTV issues after update](/images/blog/iptv-app-update/iptv-app-update-troubleshooting.webp)
+![Troubleshooting IPTV issues after update](/images/blog/iptv-app-update/images (1).jfif)
 
 ## Frequently Asked Questions
 
@@ -1583,6 +1583,6 @@ Start with the simplest checks: restart the device, test the internet connection
 If the problem continues, check decoder settings, EPG configuration, device compatibility and the application version. Testing the same playlist in another compatible player is also one of the fastest ways to determine whether the updated application is responsible.
 
 The key is to troubleshoot one variable at a time. This makes it much easier to determine whether the problem comes from the application, device, network, account or streaming service.
-\`
+`
   }
 ]
