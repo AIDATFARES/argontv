@@ -22,15 +22,15 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "ArgonTV - Premium 4K Streaming Services",
-  description: "Ultimate 4K IPTV Experience. Access +50,000 Channels, +120,000 Films & Series, and 200,000+ VODs.",
+  title: "ArgonTV | #1 Premium 4K IPTV Subscription Service",
+  description: "Upgrade your entertainment with ArgonTV. Stream 50,000+ live TV channels, live sports, and 120,000+ movies & series in stunning 4K/FHD. Start your subscription today!",
   metadataBase: new URL("https://www.argontv.shop"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "ArgonTV - Premium 4K Streaming",
-    description: "Ultimate 4K IPTV Experience. Access +50,000 Channels, +120,000 Films & Series, and 200,000+ VODs.",
+    title: "ArgonTV | #1 Premium 4K IPTV Subscription Service",
+    description: "Upgrade your entertainment with ArgonTV. Stream 50,000+ live TV channels, live sports, and 120,000+ movies & series in stunning 4K/FHD. Start your subscription today!",
     url: "https://www.argontv.shop",
     siteName: "ArgonTV",
     images: [
@@ -46,8 +46,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "ArgonTV - Premium 4K Streaming",
-    description: "Ultimate 4K IPTV Experience. Access +50,000 Channels, +120,000 Films & Series, and 200,000+ VODs.",
+    title: "ArgonTV | #1 Premium 4K IPTV Subscription Service",
+    description: "Upgrade your entertainment with ArgonTV. Stream 50,000+ live TV channels, live sports, and 120,000+ movies & series in stunning 4K/FHD. Start your subscription today!",
     images: ["/og-image-argontv.webp"],
   },
 };
