@@ -5,6 +5,7 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { ArrowLeft } from "lucide-react";
 import ArticleFAQAccordion from "@/components/blog/ArticleFAQAccordion";
+import BlogOfferCard from "@/components/blog/BlogOfferCard";
 
 export function generateStaticParams() {
   return blogPosts.map((post) => ({
@@ -159,9 +160,38 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
           prose-th:text-on-surface prose-th:border-b prose-th:border-outline-variant prose-th:py-2
           prose-td:border-b prose-td:border-outline-variant/50 prose-td:py-2"
         >
-          <ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>
-            {beforeFaq}
-          </ReactMarkdown>
+          {(() => {
+            const sections = beforeFaq.split(/(?=\n## )/);
+            let part1 = "";
+            let part2 = "";
+            let part3 = "";
+
+            if (sections.length > 3) {
+              part1 = sections.slice(0, 2).join("");
+              const remaining = sections.slice(2);
+              const midIndex = Math.floor(remaining.length / 2);
+              part2 = remaining.slice(0, midIndex).join("");
+              part3 = remaining.slice(midIndex).join("");
+            } else {
+              part1 = sections[0] || "";
+              part2 = sections[1] || "";
+              part3 = sections.slice(2).join("");
+            }
+
+            return (
+              <>
+                {part1 && <ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>{part1}</ReactMarkdown>}
+                <BlogOfferCard />
+                {part2 && <ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>{part2}</ReactMarkdown>}
+                {part3 && (
+                  <>
+                    <BlogOfferCard />
+                    <ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>{part3}</ReactMarkdown>
+                  </>
+                )}
+              </>
+            );
+          })()}
 
           {faqs.length > 0 && (
             <div className="mt-12 mb-8">
