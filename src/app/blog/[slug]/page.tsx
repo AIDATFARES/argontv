@@ -163,7 +163,10 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
           {(() => {
             if (post.cta1 && post.cta2) {
               const sections = beforeFaq.split(/(?=\n## )/);
-              const targetIndex = sections.findIndex(s => s.includes("How to Find the Real Cause of IPTV Sports Buffering"));
+              let targetIndex = sections.findIndex(s => s.includes("How to Find the Real Cause of IPTV Sports Buffering"));
+              if (targetIndex === -1) {
+                targetIndex = sections.findIndex(s => s.includes("How to Find Live Sports With IPTV EPG"));
+              }
               let cta1Index = targetIndex !== -1 ? targetIndex + 1 : 3;
               if (cta1Index > sections.length - 1) cta1Index = Math.floor(sections.length / 2);
 
