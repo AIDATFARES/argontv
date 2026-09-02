@@ -1,7 +1,21 @@
 import Link from "next/link";
 import { Sparkles } from "lucide-react";
 
-export default function BlogOfferCard() {
+interface BlogOfferCardProps {
+  heading?: string;
+  copy?: string;
+  buttonText?: string;
+  buttonLink?: string;
+  badge?: string;
+}
+
+export default function BlogOfferCard({
+  heading = "Experience Ultimate 4K IPTV Streaming",
+  copy = "Upgrade your entertainment with ArgonTV. Enjoy top-tier live sports, movies, and VOD in crystal-clear 4K. Experience zero buffering, anti-freeze technology, and instant delivery directly to all your favorite devices.",
+  buttonText = "View Pricing Plans",
+  buttonLink = "/pricing",
+  badge = "ArgonTV Premium"
+}: BlogOfferCardProps = {}) {
   return (
     <div className="my-10 relative overflow-hidden rounded-3xl bg-[#030014] border border-[#7000FF]/30 p-8 sm:p-10 shadow-[0_0_40px_rgba(112,0,255,0.15)] group transition-all duration-500 hover:border-[#7000FF]/60 hover:shadow-[0_0_50px_rgba(112,0,255,0.25)] flex flex-col items-center text-center gap-6">
       {/* Background gradients */}
@@ -14,22 +28,22 @@ export default function BlogOfferCard() {
           <span className="flex items-center justify-center w-8 h-8 rounded-full bg-[#7000FF]/20 text-[#FF00BD]">
             <Sparkles className="w-4 h-4" />
           </span>
-          <span className="text-[11px] font-black uppercase tracking-[0.2em] text-[#FF00BD]">ArgonTV Premium</span>
+          <span className="text-[11px] font-black uppercase tracking-[0.2em] text-[#FF00BD]">{badge}</span>
         </div>
         
         <h3 className="text-3xl sm:text-4xl font-black text-white leading-tight mb-4 tracking-tight !mt-0">
-          Experience Ultimate <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#7000FF] to-[#FF00BD]">4K IPTV Streaming</span>
+          {heading}
         </h3>
         
         <p className="text-slate-300 text-base sm:text-lg leading-relaxed mb-8 w-full max-w-2xl mx-auto block !mt-0">
-          Upgrade your entertainment with ArgonTV. Enjoy top-tier live sports, movies, and VOD in crystal-clear 4K. Experience zero buffering, anti-freeze technology, and instant delivery directly to all your favorite devices.
+          {copy}
         </p>
         
         <Link 
-          href="/pricing" 
+          href={buttonLink} 
           className="inline-flex items-center justify-center w-full sm:w-auto px-10 py-4 bg-gradient-to-r from-[#7000FF] to-[#FF00BD] hover:from-[#5c00d1] hover:to-[#d1009a] text-white font-extrabold uppercase tracking-wide text-sm rounded-full transition-all duration-300 shadow-[0_0_20px_rgba(112,0,255,0.4)] hover:shadow-[0_0_30px_rgba(112,0,255,0.6)] hover:scale-[1.02] active:scale-[0.98]"
         >
-          View Pricing Plans
+          {buttonText}
         </Link>
       </div>
     </div>

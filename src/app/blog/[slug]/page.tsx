@@ -161,6 +161,27 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
           prose-td:border-b prose-td:border-outline-variant/50 prose-td:py-2"
         >
           {(() => {
+            if (post.cta1 && post.cta2) {
+              const sections = beforeFaq.split(/(?=\n## )/);
+              const targetIndex = sections.findIndex(s => s.includes("How to Find the Real Cause of IPTV Sports Buffering"));
+              let cta1Index = targetIndex !== -1 ? targetIndex + 1 : 3;
+              if (cta1Index > sections.length - 1) cta1Index = Math.floor(sections.length / 2);
+
+              const part1 = sections.slice(0, cta1Index).join("");
+              const part2 = sections.slice(cta1Index, sections.length - 1).join("");
+              const part3 = sections.slice(sections.length - 1).join("");
+
+              return (
+                <>
+                  {part1 && <ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>{part1}</ReactMarkdown>}
+                  <BlogOfferCard {...post.cta1} />
+                  {part2 && <ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>{part2}</ReactMarkdown>}
+                  {part3 && <ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>{part3}</ReactMarkdown>}
+                  <BlogOfferCard {...post.cta2} />
+                </>
+              );
+            }
+
             const sections = beforeFaq.split(/(?=\n## )/);
             let part1 = "";
             let part2 = "";
